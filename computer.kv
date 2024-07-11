@@ -1,0 +1,46 @@
+#:import key_board key_board
+#:import navigation_screen_manager navigation_screen_manager
+#:import bar_with_action bar_with_action
+
+<MainMenu@MDScreen>:
+    ScrollView:
+        pos_hint: {"top":.9}
+        size_hint_y: None
+        height: 500
+        MDList:
+            OneLineListItem:
+                text:"Tick the correct option."
+                on_press: app.manager.push("KeyBoard_Tick")
+            OneLineListItem:
+                text:"Rearrange the letters to make meaningful word."
+                on_press: app.manager.push("KeyBoard_Rearrange")
+            
+            OneLineListItem:
+                text:"Answer the following question."
+                on_press: app.manager.push("KeyBoard_QNA")
+
+        
+        
+<MyScreenManager>:
+    Screen:
+        name:"MainMenu"
+        MainMenu:
+
+    Screen:
+        name: "KeyBoard_Tick"
+        Tool_With_Action:
+            title:"KeyBoard_Tick"
+            KeyBoard_Tick:
+
+    Screen:
+        name: "KeyBoard_Rearrange"
+        Tool_With_Action:
+            title:"KeyBoard_Rearrange"
+            KeyBoard_Rearrange:
+
+    
+    Screen:
+        name: "KeyBoard_QNA"
+        Tool_With_Action:
+            title:"KeyBoard_QNA"
+            KeyBoard_QNA:

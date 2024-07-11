@@ -1,0 +1,144 @@
+<KeyBoard_Tick>:
+    
+          
+    MDLabel:
+        id: head
+        text: "Tick the correct option"
+        font_size: "20sp"
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+        
+
+       
+    
+       
+    MDLabel:
+        id: question_label
+        text: "----- is used to type anything on a computer"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+        font_size: "25sp"
+        halign: "center"
+            
+      
+    MDLabel:
+        id: option11
+        text: "a.keyboard"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.55}
+    MDCheckbox:
+        id: option1
+        group:"option11"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.55}
+        size_hint: None,None
+        size:"24dp","24dp"
+                
+    MDLabel:
+        id: option22
+        text: "b.mouse"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.45}
+    MDCheckbox:
+        id: option2
+        group:"option22"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.45}
+        size_hint: None,None
+        size:"24dp","24dp"
+        
+           
+    MDLabel:
+        id: option33
+        text: "c.cpu"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.35}
+    MDCheckbox:
+        id: option3
+        group:"option33"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.35}
+        size_hint: None,None
+        size:"24dp","24dp"
+        
+    MDLabel:
+        id: option44
+        text: "d.monitor"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.25}
+    MDCheckbox:
+        id: option4
+        group:"option44"
+        pos_hint: {'center_x': 0.6, 'center_y': 0.25}
+        size_hint: None,None
+        size:"24dp","24dp"
+        
+
+    MDRaisedButton:
+        id: Submit
+        text: "Submit"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.15}
+        on_release: root.check_answer()
+
+<KeyBoard_Rearrange>:
+    
+
+    MDLabel:
+        id: head
+        text: "Rearrange the letters to make meaningful word: "
+        font_size: "20sp"
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
+    MDLabel:
+        id: question_label
+        text: "ETNER"
+        font_size: "30sp"
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.59}
+    MDTextField:
+        id: answer_input
+        font_size: 24
+        hint_text: "Put Your Answer Here"
+        helper_text: "All Letter Should Be CAPITAL"
+        helper_text_mode: "on_focus"
+        mode: "rectangle"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        size_hint: None, None
+        size:"250dp","20dp"
+        multiline: False
+
+    MDRaisedButton:
+        id:Submit
+        text: "Submit"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+        on_release: root.check_answer(answer_input.text)
+
+
+
+<KeyBoard_QNA>:
+
+    
+
+    MDLabel:
+        id: head
+        text: "Answer the following question. "
+        font_size: "20sp"
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
+    MDLabel:
+        id: question_label
+        text: "Which is the longest key on the keyboard ?"
+        font_size: "30sp"
+        halign: "center"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.59}
+    MDTextField:
+        id: answer_input
+        font_size: 24
+        hint_text: "Put Your Answer Here"
+        helper_text: "All Letter Should Be small"
+        helper_text_mode: "on_focus"
+        mode: "rectangle"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        size_hint: None, None
+        size:"250dp","20dp"
+        multiline: True
+
+    MDRaisedButton:
+        id:Submit
+        text: "Submit"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        on_release: root.check_answer(answer_input.text)
